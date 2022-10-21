@@ -1,10 +1,17 @@
 # MFEPlayground
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.5.
+This project was created to show the power of Dynamic module Federation in Angular. Here you can see many things:
+- How to create a library and reference it through various projects
+- How to create Micro Frontends (MFE) and host them dinamically inside a shell
+- How to load MFE dinamically in a shell component
+- How to create a simple message broker
+- How to communicate between mfe in a loosely-coupled manner
+- The concept of "Microlith" or the "Micro-Monolith", a programming paradigm that aggregates little and simple monolith in a page.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `npm run start` to start all the projects and test them. The shell responds in port 5000. The MFE1 in port 3000 and the MFE2 in port 3001. Navigate to `http://localhost:5000/` to have a look at the integration. The application will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 

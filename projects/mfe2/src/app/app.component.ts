@@ -27,4 +27,3 @@ export class AppComponent extends BaseWidget implements OnInit {
     this.broadcast.emit({type:"order",payload:payload});
   }
 }
-

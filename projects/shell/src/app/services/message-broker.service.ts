@@ -7,7 +7,7 @@ export class MessageBrokerService {
 
     private subscribers: any = {};
 
-    //Metodo richiamato per pubblicare un evento ai sottoscrittori dello stesso.
+    //Called to publish an event to the event subscribers    
     publish(message: BaseMessage): void {
         if (this.subscribers[message.type]) {
             for (let index = 0; index < this.subscribers[message.type].length; index++) {
@@ -17,8 +17,7 @@ export class MessageBrokerService {
         }
     }
 
-    //Invocata dalla pagina per sottoscrivere un evento su un componente
-    //Quando un evento deve essere notificato, il broker richiama il metodo notify del componente
+    //Called by the component to subscribe an event on component
     subscribe(baseWidget: BaseWidget, type: string, callback: (message: BaseMessage) => any): void {
         if (!this.subscribers[type]) {
             this.subscribers[type] = [];
